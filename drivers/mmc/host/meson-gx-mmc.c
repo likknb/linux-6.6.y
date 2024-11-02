@@ -1244,7 +1244,7 @@ static int meson_mmc_probe(struct platform_device *pdev)
 	 * From the different datasheets, it is not even clear if this mode
 	 * is officially supported by any of the SoCs
 	 */
-	mmc->caps2 &= ~MMC_CAP2_HS400;
+	mmc->caps2 &= MMC_CAP2_HS400;
 
 	if (host->dram_access_quirk) {
 		/*
